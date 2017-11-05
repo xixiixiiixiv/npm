@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- InternetExplorerのブラウザではバージョンによって崩れることがあるので、互換表示をさせないために設定するmetaタグ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- レスポンシブWebデザインを使うために必要なmetaタグです。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- https://liginc.co.jp/web/js/jquery/34048 -->
+    <link href="css/test001.css" rel="stylesheet">
+    <script>
+        $(function(){
+            $("#acMenu dt").on("click", function() {
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- http://kishiken.com/bootstrap/collapse.html -->
+      <section>
+        <h2>コンテンツを最初は非表示</h2>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#sample">コンテンツを開く </button>
+        <div id="sample" class="collapse">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3>アコーディオンの中身</h3>
+              <p>コメントコメントコメントコメントコメントコメントコメント </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <h2>コンテンツを最初から表示</h2>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#sample2">コンテンツを開く </button>
+        <div id="sample2" class="collapse in">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3>アコーディオンの中身</h3>
+              <p>コメントコメントコメントコメントコメントコメントコメント </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+    </div>
+
+    <div>
+      <!-- https://liginc.co.jp/web/js/jquery/34048 -->
+      <dl id="acMenu">
+          <dt>アコーディオンメニュー1</dt>
+          <dd>アコーディオンメニューが開く。</dd>
+          <dt>アコーディオンメニュー2</dt>
+          <dd>アコーディオンメニューが開く。</dd>
+          <dt>アコーディオンメニュー3</dt>
+          <dd>アコーディオンメニューが開く。</dd>
+      </dl>
+    </div>
+
+    <p>
+      <!-- DIVタグとSPANタグの違い -->
+      <div>hoge<div style="color:red">fuga</div>piyo</div>
+      <div>hoge<span style="color:red">fuga</span>piyo</div>
+    </p>
+
+    <!-- https://techacademy.jp/magazine/6270 -->
+    <div>
+      <hr/>
+      <!-- <form> -->
+      <!-- <form class="form-inline"> -->
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <hr/>
+      <div>
+        <form>
+          <p>
+            <input type='submit' name='action' value='下書き保存'>
+            <button type='submit' name='action' value='send'>送信</button>
+            <button type='submit' name='action' value='save'>下書き保存</button>
+            <input type="text" />
+          </p>
+          <p>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button><br/>
+          </p>
+          <p>
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <button type="button" class="btn btn-default btn-lg">Large button</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-primary">Default button</button>
+            <button type="button" class="btn btn-default">Default button</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>
+            <button type="button" class="btn btn-default btn-sm">Small button</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+            <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+          </p>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+          <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+        </form>
+      </div>
+      <hr/>
+      <header style="background-color:gray">Header sm</header>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- グリッドシステム -->
+          <!-- 上記のコードのcol-sm-2のように、col-{prefix}-{columns} の形式で合計値12を振り分けることで、簡単にマルチデバイスに対応したレイアウトを作成できる -->
+          <div class="col-sm-2" style="background-color:red;">Red</div>
+          <div class="col-sm-8" style="background-color:blue;">Blue</div>
+          <div class="col-sm-1" style="background-color:yellow;">Yellow</div>
+          <div class="col-sm-1" style="background-color:green;">green</div>
+        </div>
+      </div>
+      <footer style="background-color:gray">Footer</footer>
+
+      <hr/>
+      <header style="background-color:gray">Header lg</header>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- グリッドシステム -->
+          <!-- 上記のコードのcol-sm-2のように、col-{prefix}-{columns} の形式で合計値12を振り分けることで、簡単にマルチデバイスに対応したレイアウトを作成できる -->
+          <div class="col-lg-2" style="background-color:red;">Red</div>
+          <div class="col-lg-8" style="background-color:blue;">Blue</div>
+          <div class="col-lg-1" style="background-color:yellow;">Yellow</div>
+          <div class="col-lg-1" style="background-color:green;">green</div>
+        </div>
+      </div>
+      <footer style="background-color:gray">Footer</footer>
+
+      <hr/>
+      <header style="background-color:gray">Header md</header>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- グリッドシステム -->
+          <!-- 上記のコードのcol-sm-2のように、col-{prefix}-{columns} の形式で合計値12を振り分けることで、簡単にマルチデバイスに対応したレイアウトを作成できる -->
+          <div class="col-md-2" style="background-color:red;">Red</div>
+          <div class="col-md-8" style="background-color:blue;">Blue</div>
+          <div class="col-md-1" style="background-color:yellow;">Yellow</div>
+          <div class="col-md-1" style="background-color:green;">green</div>
+        </div>
+      </div>
+      <footer style="background-color:gray">Footer</footer>
+
+      <hr/>
+      <header style="background-color:gray">Header xs</header>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- グリッドシステム -->
+          <!-- 上記のコードのcol-sm-2のように、col-{prefix}-{columns} の形式で合計値12を振り分けることで、簡単にマルチデバイスに対応したレイアウトを作成できる -->
+          <div class="col-xs-2" style="background-color:red;">Red</div>
+          <div class="col-xs-8" style="background-color:blue;">Blue</div>
+          <div class="col-xs-1" style="background-color:yellow;">Yellow</div>
+          <div class="col-xs-1" style="background-color:green;">green</div>
+        </div>
+      </div>
+      <footer style="background-color:gray">Footer</footer>
+
+      <hr/>
+      <header style="background-color:gray">Header hidden-sm</header>
+      <div class="container-fluid2">
+        <div class="row">
+          <div class="col-sm-2" style="background-color:red;">Red</div>
+          <div class="col-sm-8 hidden-sm" style="background-color:blue;">Blue</div>
+          <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
+        </div>
+      </div>
+      <footer style="background-color:gray">Footer</footer>
+
+      <hr/>
+      <div class="container">
+        <!-- <div> -->
+        <div class="table-responsive">
+          <!-- <table class="table"> -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>名前</th>
+                <th>メールアドレス</th>
+                <th>電話番号</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                  <td>煌木 太郎</td>
+                  <td>taro.kirameki@example.com</td>
+                  <td>09011112222</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                  <td>煌木 次郎</td>
+                  <td>jiro.kirameki@example.com</td>
+                  <td>09033334444</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                  <td>煌木 花子</td>
+                  <td>hanako.kirameki@example.com</td>
+                  <td>09055556666</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr/>
+      <table>
+        <tr>
+          <td>hoge11</td>
+          <td>hoge12</td>
+          <td>hoge13</td>
+        </tr>
+        <tr>
+          <td>hoge21</td>
+          <td>hoge22</td>
+          <td>hoge23</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
