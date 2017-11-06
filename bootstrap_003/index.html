@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- InternetExplorerのブラウザではバージョンによって崩れることがあるので、互換表示をさせないために設定するmetaタグ -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブWebデザインを使うために必要なmetaタグです。 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Sample</title>
+<!-- BootstrapのCSS読み込み -->
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- jQuery読み込み -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<!-- BootstrapのJS読み込み -->
+<!-- <script src="js/bootstrap.min.js"></script> -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- <link rel="stylesheet" type="text/css" media="screen,print" href="style.css" /> -->
+<link href="sticky-footer.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<!-- タブ・メニュー -->
+<!-- <ul class="nav nav-tabs nav-justified"> -->
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#sampleContentA" data-toggle="tab" class="text-center"><span class="glyphicon glyphicon-pencil"></span><br/>mapping</a></li>
+  <li><a href="#sampleContentB" data-toggle="tab" class="text-center"><span class="glyphicon glyphicon-font"></span><br/>cell</a></li>
+  <li><a href="#sampleContentC" data-toggle="tab" class="text-center"><span class="glyphicon glyphicon-tasks"></span><br/>row</a></li>
+  <li><a href="#sampleContentD" data-toggle="tab" class="text-center"><span class="glyphicon glyphicon-indent-right"></span><br/>dataset</a></li>
+</ul>
+
+<!-- タブ内容 -->
+<div class="tab-content">
+  <div class="tab-pane active" id="sampleContentA">
+    <p>タブＡの内容</p>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="帳票">
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-primary">送信</button>
+  </span>
+</div>
+
+
+<div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="submit">
+      <i class='glyphicon glyphicon-search'></i>
+    </button>
+  </span>
+</div>
+
+  <!-- http://algo13.net/bootstrap/collapse.html -->
+  <div id="menu">
+    <div class="panel list-group">
+      <a href="#menuOne" class="list-group-item" data-toggle="collapse" data-target="#menuOne" data-parent="#menu">
+        <!-- <span class="glyphicon glyphicon-envelope"></span> メッセージ <span class="label label-success">3</span> -->
+        非明細<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+      </a>
+      <div id="menuOne" class="sublinks collapse">
+        <a class="list-group-item small"> 住所</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+        <a class="list-group-item small"> 氏名</a>
+      </div>
+      <a href="#menuTwo" class="list-group-item" data-toggle="collapse" data-target="#menuTwo" data-parent="#menu">
+        明細<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+      </a>
+      <div id="menuTwo" class="sublinks collapse in">
+        <a class="list-group-item small">氏名</a>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <div class="tab-pane" id="sampleContentB">
+    <p>タブＢの内容</p>
+
+
+  </div>
+  <div class="tab-pane" id="sampleContentC">
+    <p>タブＣの内容</p>
+  </div>
+  <div class="tab-pane" id="sampleContentD">
+    <p>タブＤの内容</p>
+  </div>
+</div>
+
+
+</div>
+
+<!-- フッターは#wrapの外に -->
+<div id="footer">
+  <div class="container">
+   <!-- コンテンツ -->
+   フッター
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- append js -->
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
