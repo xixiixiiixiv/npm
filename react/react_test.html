@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Reactサンプル</title>
+	</head>
+	<body>
+		<h1>Reactサンプル</h1>
+		<div id="app">
+		</div>
+		<div id="container"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- https://utano.jp/entry/2016/07/react-js-load-from-cdn/ -->
+		<script src="https://fb.me/react-15.2.0.js"></script>
+		<script src="https://fb.me/react-dom-15.2.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+		<!-- <script src="jsx/app.js" type="text/babel"></script> -->
+		<script>
+			// $("#app").text('hoge');
+			ReactDOM.render(
+					React.DOM.h1(null, "Hello world!"),
+					document.getElementById("app")
+					// $("#app")
+					);
+		</script>
+	</body>
+</html>
