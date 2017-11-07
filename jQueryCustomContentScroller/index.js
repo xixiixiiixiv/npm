@@ -1,0 +1,35 @@
+    (function($){
+      $(window).load(function(){
+        $(".content").mCustomScrollbar({
+          scrollButtons:{
+            enable:true
+          }
+        });
+        /* disable */
+        $("#disable-scrollbar").click(function(e){
+          e.preventDefault();
+          $("#content_1").mCustomScrollbar("disable",true);
+        });
+        $("#disable-scrollbar-no-reset").click(function(e){
+          e.preventDefault();
+          $("#content_1").mCustomScrollbar("disable");
+        });
+        $("#enable-scrollbar").click(function(e){
+          e.preventDefault();
+          $("#content_1").mCustomScrollbar("update");
+        });
+        /* destroy */
+        $("#destroy-scrollbar").click(function(e){
+          e.preventDefault();
+          $("#content_1").mCustomScrollbar("destroy");
+        });
+        $("#rebuild-scrollbar").click(function(e){
+          e.preventDefault();
+          $("#content_1").mCustomScrollbar({
+            scrollButtons:{
+              enable:true
+            }
+          });
+        });
+      });
+    })(jQuery);
