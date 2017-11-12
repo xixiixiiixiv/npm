@@ -66,13 +66,14 @@
       <div id="menuOne" class="sublinks collapse">
         <a class="list-group-item small"> 住所</a>
         <div id="field_items"></div>
-        <div id="field-row"></div>
       </div>
       <a href="#menuTwo" class="list-group-item" data-toggle="collapse" data-target="#menuTwo" data-parent="#menu">
         明細<span class="glyphicon glyphicon-chevron-down pull-right"></span>
       </a>
       <div id="menuTwo" class="sublinks collapse in">
         <a class="list-group-item small">氏名</a>
+        <div id="field-row"></div>
+        <div id="add-button"></div>
       </div>
     </div>
   </div>
@@ -112,26 +113,50 @@
     <!-- React -->
     <script type="text/jsx">
      var FieldRow = React.createClass({
+       getInitialState: function () {
+         return {
+           data:[
+             { text: "自動追加氏名" 
+               ,type: "S"
+             }
+             ,{ text: "自動追加住所" 
+               ,type: "N"
+             }
+           ]
+         };
+       },
+       aa: function (e) {
+         console.log('hoge');
+         var data = this.state.data;
+         data.push({text:"hoge",type:"S"});
+         this.setState({ data: data });
+       },
        render: function() {
          var list = [];
-         var data = [
-           { text: "自動追加氏名" 
-             ,type: "S"
-           }
-           ,{ text: "自動追加住所" 
-             ,type: "N"
-           }
-         ];
-       for(var i in data){
-          list.push(
-            <a className="list-group-item small"> {"${"}{data[i].text}.{data[i].type}{"}"}</a>
-          );
-       }
-       return(<span>{list}</span>);
+         var data = this.state.data;
+         for(var i in data){
+            list.push(
+              <a className="list-group-item small"> {"${"}{data[i].text}.{data[i].type}{"}"}</a>
+            );
+         }
+         return <div>{list}<button type="button" className="btn btn-primary" onClick={this.aa}>追加</button></div>;
        }
      });
      // マウント
      var m = React.render(<FieldRow />, document.getElementById('field-row'));
+
+     var AddButton = React.createClass({
+       aa: function (e) {
+         console.log('hoge');
+       },
+       render: function() {
+         return <button type="button" className="btn btn-primary" onClick={this.aa}>追加</button>;
+         //return <button type="button" className="btn btn-primary" onclick={this.aa}>追加</button>; onclick では認識しない
+       }
+     });
+     // マウント
+     var m = React.render(<AddButton />, document.getElementById('add-button'));
+     //console.log('hoge');
     </script>
 
 
