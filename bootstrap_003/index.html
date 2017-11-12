@@ -115,12 +115,16 @@
        render: function() {
          var list = [];
          var data = [
-           { text: "自動追加氏名" },
-           { text: "自動追加住所" }
+           { text: "自動追加氏名" 
+             ,type: "S"
+           }
+           ,{ text: "自動追加住所" 
+             ,type: "N"
+           }
          ];
        for(var i in data){
           list.push(
-            <a className="list-group-item small"> {data[i].text}</a>
+            <a className="list-group-item small"> {"${"}{data[i].text}.{data[i].type}{"}"}</a>
           );
        }
        return(<span>{list}</span>);
