@@ -59,10 +59,8 @@
   <!-- http://algo13.net/bootstrap/collapse.html -->
   <div id="menu">
     <div class="panel list-group">
-      <a href="#menuOne" class="list-group-item" data-toggle="collapse" data-target="#menuOne" data-parent="#menu">
-        <!-- <span class="glyphicon glyphicon-envelope"></span> メッセージ <span class="label label-success">3</span> -->
-        非明細<span class="glyphicon glyphicon-chevron-down pull-right"></span>
-      </a>
+      <div id="header-row"></div>
+
       <div id="menuOne" class="sublinks collapse">
         <a class="list-group-item small"> 住所</a>
         <div id="field_items"></div>
@@ -75,9 +73,11 @@
         <div id="field-row"></div>
         <div id="add-button"></div>
       </div>
+
+      <div id="field-row"></div>
+
     </div>
   </div>
-
 
   </div>
   <div class="tab-pane" id="sampleContentB">
@@ -112,6 +112,7 @@
 
     <!-- React -->
     <script type="text/jsx">
+
      var FieldRow = React.createClass({
        getInitialState: function () {
          return {
@@ -157,6 +158,18 @@
      // マウント
      var m = React.render(<AddButton />, document.getElementById('add-button'));
      //console.log('hoge');
+
+
+     var HeaderRow = React.createClass({
+       render: function() {
+         return (
+          <a href="#menuOne" className="list-group-item" data-toggle="collapse" data-target="#menuOne" data-parent="#menu">
+            非明細<span className="glyphicon glyphicon-chevron-down pull-right"></span>
+          </a>
+         );
+       }
+     });
+     var m = React.render(<HeaderRow />, document.getElementById('header-row'));
     </script>
 
 
