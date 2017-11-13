@@ -60,22 +60,6 @@
   <div id="menu">
     <div class="panel list-group">
       <div id="header-row"></div>
-
-      <div id="menuOne" class="sublinks collapse">
-        <a class="list-group-item small"> 住所</a>
-        <div id="field_items"></div>
-      </div>
-      <a href="#menuTwo" class="list-group-item" data-toggle="collapse" data-target="#menuTwo" data-parent="#menu">
-        明細<span class="glyphicon glyphicon-chevron-down pull-right"></span>
-      </a>
-      <div id="menuTwo" class="sublinks collapse in">
-        <a class="list-group-item small">氏名</a>
-        <div id="field-row"></div>
-        <div id="add-button"></div>
-      </div>
-
-      <div id="field-row"></div>
-
     </div>
   </div>
 
@@ -144,7 +128,7 @@
        }
      });
      // マウント
-     var m = React.render(<FieldRow />, document.getElementById('field-row'));
+     //var m = React.render(<FieldRow />, document.getElementById('field-row'));
 
      var AddButton = React.createClass({
        aa: function (e) {
@@ -156,16 +140,30 @@
        }
      });
      // マウント
-     var m = React.render(<AddButton />, document.getElementById('add-button'));
+     //var m = React.render(<AddButton />, document.getElementById('add-button'));
      //console.log('hoge');
 
 
      var HeaderRow = React.createClass({
        render: function() {
          return (
-          <a href="#menuOne" className="list-group-item" data-toggle="collapse" data-target="#menuOne" data-parent="#menu">
-            非明細<span className="glyphicon glyphicon-chevron-down pull-right"></span>
-          </a>
+          <div>
+            <a href="#menuOne" className="list-group-item" data-toggle="collapse" data-target="#menuOne" data-parent="#menu">
+              非明細<span className="glyphicon glyphicon-chevron-down pull-right"></span>
+            </a>
+            <div id="menuOne" className="sublinks collapse">
+              <a className="list-group-item small"> 住所</a>
+              <div id="field_items"></div>
+            </div>
+            <a href="#menuTwo" className="list-group-item" data-toggle="collapse" data-target="#menuTwo" data-parent="#menu">
+              明細<span className="glyphicon glyphicon-chevron-down pull-right"></span>
+            </a>
+            <div id="menuTwo" className="sublinks collapse in">
+              <a className="list-group-item small">氏名</a>
+              <FieldRow />
+              <AddButton />
+            </div>
+          </div>  
          );
        }
      });
